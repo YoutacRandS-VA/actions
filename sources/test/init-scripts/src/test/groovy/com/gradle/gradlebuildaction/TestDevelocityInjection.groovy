@@ -30,7 +30,7 @@ class TestDevelocityInjection extends BaseInitScriptTest {
         assumeTrue testGradleVersion.compatibleWithCurrentJvm
 
         given:
-        declareGePluginApplication(testGradleVersion.gradleVersion)
+        declareDevelocityPluginApplication(testGradleVersion.gradleVersion)
 
         when:
         def result = run(testGradleVersion, testConfig())
@@ -84,7 +84,7 @@ class TestDevelocityInjection extends BaseInitScriptTest {
         assumeTrue testGradleVersion.compatibleWithCurrentJvm
 
         given:
-        declareGePluginApplication(testGradleVersion.gradleVersion)
+        declareDevelocityPluginApplication(testGradleVersion.gradleVersion)
 
         when:
         def result = run(testGradleVersion, testConfig().withCCUDPlugin())
@@ -104,7 +104,7 @@ class TestDevelocityInjection extends BaseInitScriptTest {
         assumeTrue testGradleVersion.compatibleWithCurrentJvm
 
         given:
-        declareGePluginAndCcudPluginApplication(testGradleVersion.gradleVersion)
+        declareDevelocityPluginAndCcudPluginApplication(testGradleVersion.gradleVersion)
 
         when:
         def result = run(testGradleVersion, testConfig().withCCUDPlugin())
@@ -124,7 +124,7 @@ class TestDevelocityInjection extends BaseInitScriptTest {
         assumeTrue testGradleVersion.compatibleWithCurrentJvm
 
         given:
-        declareGePluginApplication(testGradleVersion.gradleVersion)
+        declareDevelocityPluginApplication(testGradleVersion.gradleVersion)
 
         when:
         def config = testConfig().withServer(URI.create('https://develocity-server.invalid'))
@@ -165,7 +165,7 @@ class TestDevelocityInjection extends BaseInitScriptTest {
         assumeTrue testGradleVersion.compatibleWithCurrentJvm
 
         given:
-        declareGePluginApplication(testGradleVersion.gradleVersion, URI.create('https://develocity-server.invalid'))
+        declareDevelocityPluginApplication(testGradleVersion.gradleVersion, URI.create('https://develocity-server.invalid'))
 
         when:
         def config = testConfig().withServer(mockScansServer.address, true)
@@ -344,10 +344,10 @@ class TestDevelocityInjection extends BaseInitScriptTest {
         assert !result.output.contains(pluginApplicationLogMsg)
     }
 
-    void outputContainsDevelocityConnectionInfo(BuildResult result, String geUrl, boolean geAllowUntrustedServer, boolean geCaptureFileFingerprints = false) {
-        def geConnectionInfo = "Connection to Develocity: $geUrl, allowUntrustedServer: $geAllowUntrustedServer, captureFileFingerprints: $geCaptureFileFingerprints"
-        assert result.output.contains(geConnectionInfo)
-        assert 1 == result.output.count(geConnectionInfo)
+    void outputContainsDevelocityConnectionInfo(BuildResult result, String develocityUrl, boolean develocityAllowUntrustedServer, boolean develocityCaptureFileFingerprints = false) {
+        def develocityConnectionInfo = "Connection to Develocity: $develocityUrl, allowUntrustedServer: $develocityAllowUntrustedServer, captureFileFingerprints: $geCaptureFileFingerprints"
+        assert result.output.contains(develocityConnectionInfo)
+        assert 1 == result.output.count(develocityConnectionInfo)
     }
 
     void outputContainsPluginRepositoryInfo(BuildResult result, String gradlePluginRepositoryUrl, boolean withCredentials = false) {
@@ -362,8 +362,8 @@ class TestDevelocityInjection extends BaseInitScriptTest {
         }
     }
 
-    void outputEnforcesDevelocityUrl(BuildResult result, String geUrl, boolean geAllowUntrustedServer) {
-        def enforceUrl = "Enforcing Develocity: $geUrl, allowUntrustedServer: $geAllowUntrustedServer"
+    void outputEnforcesDevelocityUrl(BuildResult result, String develocityUrl, boolean develocityAllowUntrustedServer) {
+        def enforceUrl = "Enforcing Develocity: $develocityUrl, allowUntrustedServer: $develocityAllowUntrustedServer"
         assert result.output.contains(enforceUrl)
         assert 1 == result.output.count(enforceUrl)
     }
