@@ -393,7 +393,7 @@ class TestDevelocityInjection extends BaseInitScriptTest {
     }
 
     void outputContainsDevelocityConnectionInfo(BuildResult result, String develocityUrl, boolean develocityAllowUntrustedServer, boolean develocityCaptureFileFingerprints = false) {
-        def develocityConnectionInfo = "Connection to Develocity: $develocityUrl, allowUntrustedServer: $develocityAllowUntrustedServer, captureFileFingerprints: $geCaptureFileFingerprints"
+        def develocityConnectionInfo = "Connection to Develocity: $develocityUrl, allowUntrustedServer: $develocityAllowUntrustedServer, captureFileFingerprints: $develocityCaptureFileFingerprints"
         assert result.output.contains(develocityConnectionInfo)
         assert 1 == result.output.count(develocityConnectionInfo)
     }
