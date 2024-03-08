@@ -75,11 +75,12 @@ def BUILD_SCAN_PLUGIN_CLASS = 'com.gradle.scan.plugin.BuildScanPlugin'
 
 def GRADLE_ENTERPRISE_PLUGIN_ID = 'com.gradle.enterprise'
 def GRADLE_ENTERPRISE_PLUGIN_CLASS = 'com.gradle.enterprise.gradleplugin.GradleEnterprisePlugin'
+def GRADLE_ENTERPRISE_EXTENSION_CLASS = 'com.gradle.enterprise.gradleplugin.GradleEnterpriseExtension'
 
 def DEVELOCITY_PLUGIN_ID = 'com.gradle.develocity'
 def DEVELOCITY_PLUGIN_CLASS = 'com.gradle.develocity.agent.gradle.DevelocityPlugin'
-def GRADLE_ENTERPRISE_EXTENSION_CLASS = 'com.gradle.enterprise.gradleplugin.GradleEnterpriseExtension'
 def DEVELOCITY_CONFIGURATION_CLASS = 'com.gradle.develocity.agent.gradle.DevelocityConfiguration'
+
 def SETTINGS_EXTENSION_CLASSES = [GRADLE_ENTERPRISE_EXTENSION_CLASS, DEVELOCITY_CONFIGURATION_CLASS]
 
 def CI_AUTO_INJECTION_CUSTOM_VALUE_NAME = 'CI auto injection'
@@ -107,8 +108,8 @@ def develocityUrl = getInputParam('develocity.url')
 def develocityAllowUntrustedServer = Boolean.parseBoolean(getInputParam('develocity.allow-untrusted-server'))
 def develocityEnforceUrl = Boolean.parseBoolean(getInputParam('develocity.enforce-url'))
 def buildScanUploadInBackground = Boolean.parseBoolean(getInputParam('develocity.build-scan.upload-in-background'))
-def develocityPluginVersion = getInputParam('develocity.plugin.version')
 def develocityCaptureFileFingerprints = Boolean.parseBoolean(getInputParam('develocity.capture-file-fingerprints'))
+def develocityPluginVersion = getInputParam('develocity.plugin.version')
 def ccudPluginVersion = getInputParam('develocity.ccud-plugin.version')
 def buildScanTermsOfUseUrl = getInputParam('build-scan.terms-of-use.url') ?: getInputParam('build-scan.terms-of-service.url')
 def buildScanTermsOfUseAgree = getInputParam('build-scan.terms-of-use.agree') ?: getInputParam('build-scan.terms-of-service.agree')
