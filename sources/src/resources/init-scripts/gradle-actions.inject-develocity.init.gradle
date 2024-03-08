@@ -163,7 +163,7 @@ if (GradleVersion.current() < GradleVersion.version('6.0')) {
                     }
                     if (isAtLeast(develocityPluginVersion, '2.1') && atLeastGradle5) {
                         if (isAtLeast(develocityPluginVersion, '3.17')) {
-                            buildScanExtension.capture.fileFingerprints.set(develocityCaptureFileFingerprints)
+                            buildScanExtension.capture.fileFingerprints = develocityCaptureFileFingerprints
                         } else if (isAtLeast(develocityPluginVersion, '3.7')) {
                             buildScanExtension.capture.taskInputFiles = develocityCaptureFileFingerprints
                         } else {
@@ -218,7 +218,7 @@ if (GradleVersion.current() < GradleVersion.version('6.0')) {
                         develocity.buildScan.termsOfUseAgree = buildScanTermsOfUseAgree
                     }
 
-                    develocity.buildScan.capture.fileFingerprints.set(develocityCaptureFileFingerprints)
+                    develocity.buildScan.capture.fileFingerprints = develocityCaptureFileFingerprints
                 }
             }
 
@@ -265,7 +265,7 @@ if (GradleVersion.current() < GradleVersion.version('6.0')) {
                 }
 
                 eachDevelocitySettingsExtension(settings, [DEVELOCITY_CONFIGURATION_CLASS]) { ext ->
-                    ext.buildScan.capture.fileFingerprints.set(develocityCaptureFileFingerprints)
+                    ext.buildScan.capture.fileFingerprints = develocityCaptureFileFingerprints
                 }
             }
 
@@ -285,7 +285,7 @@ if (GradleVersion.current() < GradleVersion.version('6.0')) {
                     }
                 }
                 eachDevelocitySettingsExtension(settings, [DEVELOCITY_CONFIGURATION_CLASS]) { ext ->
-                    ext.buildScan.capture.fileFingerprints.set(develocityCaptureFileFingerprints)
+                    ext.buildScan.capture.fileFingerprints = develocityCaptureFileFingerprints
                 }
             }
 
