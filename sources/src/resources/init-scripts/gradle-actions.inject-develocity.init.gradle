@@ -262,35 +262,40 @@ if (GradleVersion.current() < GradleVersion.version('6.0')) {
                 }
             }
 
-            if (develocityUrl && develocityEnforceUrl) {
-                logger.lifecycle("Enforcing Develocity: $develocityUrl, allowUntrustedServer: $develocityAllowUntrustedServer, captureFileFingerprints: $develocityCaptureFileFingerprints")
-                eachDevelocitySettingsExtension(settings, SETTINGS_EXTENSION_CLASSES) { ext ->
+            eachDevelocitySettingsExtension(settings, [GRADLE_ENTERPRISE_EXTENSION_CLASS]) { ext ->
+                if (develocityUrl && develocityEnforceUrl) {
+                    logger.lifecycle("Enforcing Develocity: $develocityUrl, allowUntrustedServer: $develocityAllowUntrustedServer, captureFileFingerprints: $develocityCaptureFileFingerprints")
                     ext.server = develocityUrl
                     ext.allowUntrustedServer = develocityAllowUntrustedServer
                 }
-                eachDevelocitySettingsExtension(settings, [GRADLE_ENTERPRISE_EXTENSION_CLASS]) { ext ->
-                    if (isAtLeast(develocityPluginVersion, '2.1')) {
-                        if (isAtLeast(develocityPluginVersion, '3.7')) {
-                            ext.buildScan.capture.taskInputFiles = develocityCaptureFileFingerprints
-                        } else {
-                            ext.buildScan.captureTaskInputFiles = develocityCaptureFileFingerprints
-                        }
-                    }
-                }
-                eachDevelocitySettingsExtension(settings, [DEVELOCITY_CONFIGURATION_CLASS]) { ext ->
-                    ext.buildScan.capture.fileFingerprints = develocityCaptureFileFingerprints
-                }
-            }
 
-            if (buildScanTermsOfUseUrl && buildScanTermsOfUseAgree) {
-                eachDevelocitySettingsExtension(settings, [GRADLE_ENTERPRISE_EXTENSION_CLASS]) { ext ->
+                if (buildScanTermsOfUseUrl && buildScanTermsOfUseAgree) {
                     ext.buildScan.termsOfServiceUrl = buildScanTermsOfUseUrl
                     ext.buildScan.termsOfServiceAgree = buildScanTermsOfUseAgree
                 }
-                eachDevelocitySettingsExtension(settings, [DEVELOCITY_CONFIGURATION_CLASS]) { ext ->
+
+                if (isAtLeast(develocityPluginVersion, '2.1')) {
+                    if (isAtLeast(develocityPluginVersion, '3.7')) {
+                        ext.buildScan.capture.taskInputFiles = develocityCaptureFileFingerprints
+                    } else {
+                        ext.buildScan.captureTaskInputFiles = develocityCaptureFileFingerprints
+                    }
+                }
+            }
+
+            eachDevelocitySettingsExtension(settings, [DEVELOCITY_CONFIGURATION_CLASS]) { ext ->
+                if (develocityUrl && develocityEnforceUrl) {
+                    logger.lifecycle("Enforcing Develocity: $develocityUrl, allowUntrustedServer: $develocityAllowUntrustedServer, captureFileFingerprints: $develocityCaptureFileFingerprints")
+                    ext.server = develocityUrl
+                    ext.allowUntrustedServer = develocityAllowUntrustedServer
+                }
+
+                if (buildScanTermsOfUseUrl && buildScanTermsOfUseAgree) {
                     ext.buildScan.termsOfUseUrl = buildScanTermsOfUseUrl
                     ext.buildScan.termsOfUseAgree = buildScanTermsOfUseAgree
                 }
+
+                ext.buildScan.capture.fileFingerprints = develocityCaptureFileFingerprints
             }
         }
 
