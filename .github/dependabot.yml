@@ -10,7 +10,7 @@ updates:
   - package-ecosystem: "npm"
     directory: "/sources"
     schedule:
-      interval: "weekly"
+      interval: "5 minutes"
     groups:
       npm-dependencies:
         patterns:
@@ -24,7 +24,7 @@ updates:
       - "/.github/actions/build-dist"
       - "/.github/actions/init-integ-test"
     schedule:
-      interval: "weekly"
+      interval: "5 minutes"
     groups:
       github-actions:
         patterns:
@@ -42,7 +42,7 @@ updates:
     registries:
       - gradle-plugin-portal
     schedule:
-      interval: "weekly"
+      interval: "5 minutes"
     groups:
       gradle:
         patterns:
