@@ -1,5 +1,133 @@
 [
   {
+    "version": "9.0.0-rc-1",
+    "checksum": "76805e32c009c0cf0dd5d206bddc9fb22ea42e84db904b764f3047de095493f3"
+  },
+  {
+    "version": "8.14.2",
+    "checksum": "7d3a4ac4de1c32b59bc6a4eb8ecb8e612ccd0cf1ae1e99f66902da64df296172"
+  },
+  {
+    "version": "7.6.5",
+    "checksum": "14dfa961b6704bb3decdea06502781edaa796a82e6da41cd2e1962b14fbe21a3"
+  },
+  {
+    "version": "9.0.0-milestone-9",
+    "checksum": "76805e32c009c0cf0dd5d206bddc9fb22ea42e84db904b764f3047de095493f3"
+  },
+  {
+    "version": "8.14.1",
+    "checksum": "7d3a4ac4de1c32b59bc6a4eb8ecb8e612ccd0cf1ae1e99f66902da64df296172"
+  },
+  {
+    "version": "9.0.0-milestone-8",
+    "checksum": "f98ed44dd3f067fa699b5c34661be67c7f0097ea58b0017255141a08d2eb5f87"
+  },
+  {
+    "version": "9.0-milestone-7",
+    "checksum": "f98ed44dd3f067fa699b5c34661be67c7f0097ea58b0017255141a08d2eb5f87"
+  },
+  {
+    "version": "9.0-milestone-6",
+    "checksum": "f98ed44dd3f067fa699b5c34661be67c7f0097ea58b0017255141a08d2eb5f87"
+  },
+  {
+    "version": "9.0-milestone-5",
+    "checksum": "c605ee1b011c0da3bc468735530c1d43ea3ede0fb8ce978b5479c7f688343ef5"
+  },
+  {
+    "version": "9.0-milestone-4",
+    "checksum": "c605ee1b011c0da3bc468735530c1d43ea3ede0fb8ce978b5479c7f688343ef5"
+  },
+  {
+    "version": "8.14",
+    "checksum": "7d3a4ac4de1c32b59bc6a4eb8ecb8e612ccd0cf1ae1e99f66902da64df296172"
+  },
+  {
+    "version": "8.14-rc-3",
+    "checksum": "7d3a4ac4de1c32b59bc6a4eb8ecb8e612ccd0cf1ae1e99f66902da64df296172"
+  },
+  {
+    "version": "9.0-milestone-3",
+    "checksum": "c605ee1b011c0da3bc468735530c1d43ea3ede0fb8ce978b5479c7f688343ef5"
+  },
+  {
+    "version": "8.14-rc-2",
+    "checksum": "7d3a4ac4de1c32b59bc6a4eb8ecb8e612ccd0cf1ae1e99f66902da64df296172"
+  },
+  {
+    "version": "9.0-milestone-2",
+    "checksum": "c605ee1b011c0da3bc468735530c1d43ea3ede0fb8ce978b5479c7f688343ef5"
+  },
+  {
+    "version": "9.0-milestone-1",
+    "checksum": "9687bf4e8beb2c293cfd1393cbf2854ef68f921757302116033f476289abf7b0"
+  },
+  {
+    "version": "8.14-rc-1",
+    "checksum": "7d3a4ac4de1c32b59bc6a4eb8ecb8e612ccd0cf1ae1e99f66902da64df296172"
+  },
+  {
+    "version": "8.14-milestone-8",
+    "checksum": "81a82aaea5abcc8ff68b3dfcb58b3c3c429378efd98e7433460610fecd7ae45f"
+  },
+  {
+    "version": "8.14-milestone-7",
+    "checksum": "81a82aaea5abcc8ff68b3dfcb58b3c3c429378efd98e7433460610fecd7ae45f"
+  },
+  {
+    "version": "8.14-milestone-5",
+    "checksum": "81a82aaea5abcc8ff68b3dfcb58b3c3c429378efd98e7433460610fecd7ae45f"
+  },
+  {
+    "version": "8.14-milestone-4",
+    "checksum": "81a82aaea5abcc8ff68b3dfcb58b3c3c429378efd98e7433460610fecd7ae45f"
+  },
+  {
+    "version": "8.13",
+    "checksum": "81a82aaea5abcc8ff68b3dfcb58b3c3c429378efd98e7433460610fecd7ae45f"
+  },
+  {
+    "version": "8.14-milestone-3",
+    "checksum": "81a82aaea5abcc8ff68b3dfcb58b3c3c429378efd98e7433460610fecd7ae45f"
+  },
+  {
+    "version": "8.13-rc-2",
+    "checksum": "81a82aaea5abcc8ff68b3dfcb58b3c3c429378efd98e7433460610fecd7ae45f"
+  },
+  {
+    "version": "8.14-milestone-2",
+    "checksum": "81a82aaea5abcc8ff68b3dfcb58b3c3c429378efd98e7433460610fecd7ae45f"
+  },
+  {
+    "version": "8.14-milestone-1",
+    "checksum": "81a82aaea5abcc8ff68b3dfcb58b3c3c429378efd98e7433460610fecd7ae45f"
+  },
+  {
+    "version": "8.13-rc-1",
+    "checksum": "81a82aaea5abcc8ff68b3dfcb58b3c3c429378efd98e7433460610fecd7ae45f"
+  },
+  {
+    "version": "8.12.1",
+    "checksum": "2db75c40782f5e8ba1fc278a5574bab070adccb2d21ca5a6e5ed840888448046"
+  },
+  {
+    "version": "8.13-milestone-3",
+    "checksum": "2db75c40782f5e8ba1fc278a5574bab070adccb2d21ca5a6e5ed840888448046"
+  },
+  {
+    "version": "8.12.1-milestone-1",
+    "checksum": "2db75c40782f5e8ba1fc278a5574bab070adccb2d21ca5a6e5ed840888448046"
+  },
+  {
+    "version": "8.13-milestone-2",
+    "checksum": "2db75c40782f5e8ba1fc278a5574bab070adccb2d21ca5a6e5ed840888448046"
+  },
+  {
+    "version": "8.13-milestone-1",
+    "checksum": "2db75c40782f5e8ba1fc278a5574bab070adccb2d21ca5a6e5ed840888448046"
+  },
+  {
     "version": "8.12",
     "checksum": "2db75c40782f5e8ba1fc278a5574bab070adccb2d21ca5a6e5ed840888448046"
   },
